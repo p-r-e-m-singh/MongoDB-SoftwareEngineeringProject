@@ -1,0 +1,44 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Leaf Curo</title>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">      
+    <link href="{{ url_for('static', filename='css/project.css') }}" rel="stylesheet">      
+</head>
+
+<body>
+    <nav>
+    <div class="nav-top">
+        <h1>Leaf Curo</h1>
+    </div>
+</nav>
+    
+    <div id="mySidenav" class="sidenav">
+        <!-- <a href="javascript:void(0)" >&times;</a> -->
+        <a style="padding-top:0px;" href="profile.html"><img src="https://cdn-icons-png.flaticon.com/512/190/190683.png" alt="Logo" style="height: 70px;"></a>
+        <a href="logout" style="font-size: 15px; color: red;">Logout</a>
+        <a href="/">Home</a>
+        <a href="about.html">About</a>
+        <a href="https://icar.org.in/">ICAR</a>
+        <a href="https://www.indiastat.com/data/agriculture/tomato">Stats</a>
+        <a href="history.html">History</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <center>
+      <div class="container">
+          <div id="content" >{% block content %}{% endblock %}</div>
+      </div> 
+    </center>
+</body>
+
+<footer style=" margin-bottom: 0;background-color: black;color: beige;">
+    Developed by Farmer Supporters and Rising and Shining Coders
+    <script src="{{ url_for('static', filename='js/main.js') }}" type="text/javascript"></script>    
+</footer>
+
+</html>

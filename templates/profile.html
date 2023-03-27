@@ -1,0 +1,68 @@
+{% extends "base.html" %} {% block content %}
+
+
+<script lang="javascript">
+    const contactBtn = document.getElementById("contact-btn");
+    contactBtn.addEventListener("click", function() {
+    window.location.href = "contact.html";
+    });
+</script>
+<link rel="stylesheet" href="profile.css">
+<style>
+    body {
+      background-image: url('#');
+      background-repeat: repeat;
+      opacity: 0.9;
+      filter: alpha(opacity=90);
+    }
+  </style>
+</head>
+<body>
+
+<section id="profile-section">
+  <form id="upload-file" method="post" enctype="multipart/form-data">
+    <label for="imageUpload" class="profile-pic">
+        <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+        <input type="file" id="image" name="image" accept="image/*">
+        <img src="https://cdn-icons-png.flaticon.com/512/190/190683.png" alt="Your Image" style="height: 70px;"/>
+    </label>
+</form>
+    <br/><br/>
+    <center>
+    <div class="input-container">
+      {% for m,p in data %}
+      Username: {{m[1]}}<br><br><br>
+        
+      Name: {{p[1]}} <br>
+      Profession: {{p[3]}} <br>
+      City: {{p[4]}} <br>
+      Mobile no: {{p[2]}} <br>
+      {% endfor %}
+      
+        <br/><br/><br/>
+        <label for="name">Name:</label>
+        <input type="text" name = "name" id="name">
+          <br/><br/>
+          <label for="job">Profession:</label>
+          <input type="text" name = "Profession" id="job">
+          <br/><br/>
+          <label for="city">City:</label>
+          <input type="text" name = "city" id="city">
+          <br/><br/>
+          <label for="mobno">Mobile No(Optional):</label>
+          <input type="tel" name = "phone" id="mobno">
+          <br/><br/><br/>
+          <!-- <label for="applang">Select Your Preferred Language</label>
+            <select name="applang" id="applang">
+              <option value="eng">English</option>
+              <option value="hindi">Hindi</option>
+              <option value="punjabi">Punjabi</option>
+              <option value="marathi">Marathi</option>
+            </select> -->
+            <button type="button" class="my-button" id="contact-btn" onclick="load_content()">Update Profile</button>
+      
+      </center>
+    </div>
+  </section>
+  <script src="{{ url_for('static', filename='js/profile.js') }}" type="text/javascript"></script>
+{% endblock %}

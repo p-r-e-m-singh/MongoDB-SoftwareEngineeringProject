@@ -1,0 +1,56 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AI Demo</title>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">      
+    <link href="{{ url_for('static', filename='css/project.css') }}" rel="stylesheet">      
+</head>
+
+<body>
+    <!-- <center><h1 style="height:50px;font-style:italic;background-color: #32CD32;margin:0px">Leaf Curo</h1>
+    </center> -->
+    <div class="nav-top">
+        <h1>Leaf Curo</h1>
+    </div>
+    
+    <!-- <nav style="background-color: #e86e11; 
+    position: fixed;
+    margin-top: 54px;">
+        <ul>
+            <li style="float:right"><a href="signup.html">Sign In</a></li>
+            <li style="float:right"><a  href="login.html">Log-In</a></li>
+          
+        </ul>
+      </nav> -->
+      <div id="mySidenav" class="sidenav">
+        <a href="https://icar.org.in/">ICAR</a>
+        <a href="https://www.indiastat.com/data/agriculture/tomato">Stats</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <center>
+          <div class="container mid">
+            <button type="button" class="my-button" id="first-logbtn" onclick="window.location.href = 'login.html';">Login In to start Predicting</button> <br>
+            <div class="about-first">
+        Leaf diseases in plants can have a significant impact on agricultural production, resulting in decreased yield and quality of crops. Currently, farmers rely on manual inspection and diagnosis of plant diseases, which can be time-consuming, prone to errors, and may lead to the delay of the appropriate treatment. <br><br>
+        To address this issue, a software engineering project is proposed to develop a leaf disease detection system using artificial intelligence (AI). The system will be designed to analyze images of plant leaves and identify the presence of diseases accurately and quickly, providing farmers with early warning of plant health problems.
+        The primary objective of this project is to develop a software application that utilizes AI techniques such as machine learning and computer vision to automate the detection and diagnosis of leaf diseases in plants. The system will be designed to identify common leaf diseases that affect crops, such as powdery mildew, rust, and blight. <br><br>
+        The proposed system will provide farmers with an efficient and reliable tool to detect leaf diseases in plants, enabling them to take the necessary actions to prevent the spread of diseases and ensure the health of their crops. The system's success will depend on its ability to accurately and efficiently analyze large volumes of plant images while providing farmers with actionable information in real-time. <br><br>
+        Overall, the proposed leaf disease detection system using AI has the potential to revolutionize plant health management, significantly reducing the time and effort required for manual diagnosis and improving the overall health and productivity of crLeaf diseases in plants can have a significant impact on agricultural production, resulting in decreased yield and quality of crops. Currently, farmers rely on manual inspection and diagnosis of plant diseases, which can be time-consuming, prone to errors, and may lead to the delay of the appropriate treatment. <br>
+    </div>
+      </div> 
+    </center>
+</body>
+
+<footer style=" margin-bottom: 0;background-color: black;color: beige;">
+    Developed by Farmer Supporters and Rising and Shining Coders
+    <script src="{{ url_for('static', filename='js/profile.js') }}" type="text/javascript"></script>  
+</footer>
+
+</html>
+
+

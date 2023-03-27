@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="hbox mid">
+        {% for his, i in logs %}
+            <div class="hcard">
+                <img class="prof_img" style="height: 40px;" src={{i}} alt="">
+                <br><div class="htext">
+                Disease found:
+                <br>{{his[3]}}
+            </div>
+                <br><sub>({{his[4]}})</sub>
+            </div>
+        {% endfor %}
+    </div>
+    <style>
+        .hbox{
+            margin-left: 250px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-content: center;
+        }
+        .hcard{
+            height:180px;
+            width: 40%;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 2px black solid;
+            border-radius: 4%;
+            align-items: center;
+            flex-basis: 25%;
+        }
+        .prof_img{
+            width: 70%;
+            height: 110px;
+        }
+    </style>
+{% endblock content %}

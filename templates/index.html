@@ -1,0 +1,32 @@
+{% extends "base.html" %} {% block content %}
+
+
+<div class="img-upload-section mid">
+    <h1 class="upload-heading" style="margin-top: 70px;">Upload your image here</h1>
+    <form id="upload-file" method="post" enctype="multipart/form-data">
+        <label for="imageUpload" class="upload-label">
+            <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+            <!-- Click to check Leaf by uploading it... -->
+            <div class="img-pic">
+            <img class="img-pic" src="https://images.squarespace-cdn.com/content/v1/504fafcf84ae1835d7e5c807/1481053836481-1P6LXZV7W56MFQ3XTRYF/upload-arrow_318-26670.jpg?format=750w"></div>
+        </label>
+    </form>
+
+    <div class="image-section" style="display:none;">
+        <div class="img-preview">
+            <div id="imagePreview">
+            </div>
+        </div>
+        <div>
+            <button type="button" class="my-button " id="btn-predict" >Predict!</button>
+        </div>
+    </div>
+
+    <div class="loader" style="display:none;"></div>
+
+    <h3 class="result" id="result" style="padding-bottom: 50px;">
+        
+    </h3>
+
+</div>
+{% endblock %}
